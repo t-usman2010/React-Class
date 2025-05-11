@@ -3,6 +3,7 @@ function Perrameter(){
     let personinfo=["kamran",12,4.3,"third semester"];
     return(
         <>
+        <h1>Secound Project</h1>
         <App2 name={"Taha USman"} age={personinfo[0]} cgpa={"5.00"} semester={"third Semester"} />
         <App3 device_name={"Laptop"}/>
             </>

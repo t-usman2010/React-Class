@@ -1,6 +1,7 @@
 function Foodapp(){
     return(
         <div>
+            <h1>Third Project</h1>
             <h1>Food App</h1>
             <p>Welcome to the Food App!</p>
             <CheckingStock stock={10} Item={"Pizza"}/>
