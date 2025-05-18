@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './First Project/App';
 import Perrameter from './First Project/App2';
 import FoodApp from './First Project/App3';
+import Home_Project from './First Project/Home_Project';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
     <App />
     <Perrameter/> 
     <FoodApp/>
+    <Home_Project/> 
   </React.StrictMode>
 );
 
