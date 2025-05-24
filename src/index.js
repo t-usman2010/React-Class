@@ -4,12 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './Class-2/app.js';
 import ConditionalRendering from './Class-2/App2.js';
+import App1 from './Class-2/Home_work.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App/>
     <ConditionalRendering/>
+    <App1/>
   </React.StrictMode>
 );
 
