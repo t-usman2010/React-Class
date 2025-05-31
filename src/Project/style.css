@@ -1,0 +1,128 @@
+/* Base Reset */
+body {
+  background: linear-gradient(135deg, #0a0f1a, #111827);
+  font-family: 'Orbitron', 'Arial', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #00f6ff;
+}
+
+/* Calculator Box */
+.calculator-container {
+  background: #1c1f2b;
+  border: 2px solid #00f6ff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  padding: 30px;
+  width: 360px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Display */
+.display {
+  background: #0d1117;
+  color: #0ff;
+  border: 2px solid #00f6ff;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #0ff;
+}
+
+/* Button Grid */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* Common Button Styles */
+button {
+  font-size: 22px;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #00eaff;
+  background: #212736;
+  box-shadow: 0 0 10px #00eaff33;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #293040;
+  box-shadow: 0 0 12px #00ffff99;
+  transform: scale(1.05);
+}
+
+/* Operator Buttons */
+.operator {
+  background: #0a84ff;
+  color: white;
+  box-shadow: 0 0 10px #0a84ff55;
+}
+
+.operator:hover {
+  background: #0066cc;
+}
+
+/* Equals Button */
+.equals {
+  grid-column: span 4;
+  background: linear-gradient(145deg, #00c9ff, #005e9e);
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 0 20px #00f6ff99;
+  border: 2px solid #00f6ff;
+  animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px #00f6ff99;
+  }
+  50% {
+    box-shadow: 0 0 20px #00f6ffcc;
+  }
+  100% {
+    box-shadow: 0 0 10px #00f6ff99;
+  }
+}
+
+/* Bigger "0" Button */
+button[style*="grid-column"] {
+  grid-column: span 3;
+  background: #007bff;
+  color: white;
+  font-size: 26px;
+}
+
+button[style*="grid-column"]:hover {
+  background: #005ecb;
+  box-shadow: 0 0 12px #00bfff;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .calculator-container {
+    width: 90%;
+  }
+
+  .display {
+    font-size: 28px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 12px;
+  }
+}
