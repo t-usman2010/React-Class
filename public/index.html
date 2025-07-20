@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gym Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏋️‍♂️ Gym Members</h1>
+    <ul id="memberList" class="member-list">
+      <!-- Member list will load here using JS -->
+    </ul>
+
+    <form action="/add" method="get" class="add-form">
+      <input type="text" name="name" placeholder="Enter new member" required />
+      <button type="submit">Add Member</button>
+    </form>
+  </div>
+
+  <script>
+    fetch('/data')
+      .then(res => res.json())
+      .then(members => {
+        const list = document.getElementById('memberList');
+        members.forEach(name => {
+          const li = document.createElement('li');
+          li.innerHTML = `${name} <a href="/remove?name=${name}" class="remove-btn">[Remove]</a>`;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
